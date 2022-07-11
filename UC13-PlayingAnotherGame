@@ -1,0 +1,26 @@
+package com.bridzelab;
+import java.util.Random;
+import java.util.Scanner;
+public class TicTocToe {
+    static char[] gameBoard = new char[10];
+    static Scanner scanner = new Scanner(System.in);
+    static char user = '1';
+    static int userPosition;
+    static int computerPosition;
+    static char computerTurn;
+    static char userTurn;
+    static char exitCode = '0';
+    static int turnCount;
+
+    public static void main(String[] args) {
+        System.out.println("Welcome to Tic Toc toe Program");
+        whoWillWin();
+        System.out.println("You want play another game \n1.Yes\n2.No");
+        int choose = scanner.nextInt();
+        if (choose == 1) {
+            System.out.println("Accept for another game");
+            whoWillWin();
+        } else {
+            System.out.println("Rejected for the another game");
+        }
+    }
